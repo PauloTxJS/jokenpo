@@ -1,0 +1,94 @@
+* {
+    font-family: Helvetica, Arial;
+    font-weight: 400;
+    cursor: default;
+}
+
+
+#title {
+    text-align: center;
+    color:#2d3436;
+}
+
+#scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gamer, #computer {
+    position:relative;
+    flex-grow: 1;
+    color: #fff;
+    border-radius: 5px;
+    padding:20px;
+}
+#gamer h2, #computer h2 {
+    margin:0;
+    padding:0;
+}
+
+#gamer {
+    background-color: #ff7675;
+}
+
+#nameGamer, #nameComputer {
+    font-size: 24px;
+}
+
+#nameComputer {
+    text-align:right;
+}
+
+#pointsGamer, #pointsComputer {
+    position: absolute;
+    top:8px;
+    font-size: 52px;
+}
+
+#pointsGamer {
+    right:20px;
+}
+
+#gamer #choiceGamer, #computer #choiceComputer {
+    list-style: none;
+    text-align: center;
+    margin: 30px 0 0;
+    padding: 0px;
+}
+#gamer #choiceGamer li, #computer #choiceComputer li {
+    display: inline;
+    padding: 0 15px;
+}
+
+#gamer #choiceGamer a, #computer #choiceComputer a {
+    opacity: .1;
+}
+
+#gamer #choiceGamer a:hover,
+#gamer #choiceGamer a.selected, #computer #choiceComputer a.selected {
+    opacity: .9;
+}
+
+#gamer #choiceGamer img, #computer #choiceComputer img {
+    max-width:20%;
+}
+
+#versus {
+    font-size: 80px;
+    padding:0 40px;
+}
+
+#computer {
+    background-color: #3498db;
+}
+
+#message {
+    background-color: #636e72;
+    color:#fff;
+    text-align: center;
+    border-radius: 5px;
+    margin:20px 0;
+    padding:20px;
+    font-size: 24px;
+}
