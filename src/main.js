@@ -1,9 +1,9 @@
 let name;
 let gamerName;
 
-let choiceGamer1 = document.querySelector('#choiceGamer1');
-let choiceGamer2 = document.querySelector('#choiceGamer2');
-let choiceGamer3 = document.querySelector('#choiceGamer3');
+let choiceGamer1 = document.querySelector('#gamer-choice-1');
+let choiceGamer2 = document.querySelector('#gamer-choice-2');
+let choiceGamer3 = document.querySelector('#gamer-choice-3');
 let message = document.querySelector('#message');
 let pointsGamer = document.querySelector('#pointsGamer');
 let pointsComputer = document.querySelector('#pointsComputer');
@@ -69,9 +69,23 @@ function result(gamer, computer) {
 
 }
 
+//Add class 'selected'
+function select(type, choice) {
+    document.getElementById(type + '-choice-' + choice).classList.add('selected');
+}
+
+//Remove class 'selected'
+function unselect(type, choice) {
+    document.getElementById(type + '-choice-' + choice).classList.remove('selected');
+}
+
 function toPlay(choice) {
     choiceGamer = choice;
+    select('gamer', choiceGamer);
+
     choiceComputer = sortear(1, 3);
+    select('computer', choiceComputer);
+
     let r = result(choiceGamer, choiceComputer);
     if (r === 0) {
         msn(`Empate`);
@@ -84,4 +98,11 @@ function toPlay(choice) {
         pointsC++;
         pointsComputer.innerHTML = pointsC;
     }
+
+    setTimeout(function(){
+        unselect('gamer', choiceGamer)
+    }, 2500);
+    setTimeout(function(){
+        unselect('computer', choiceComputer)
+    }, 2500);
 }

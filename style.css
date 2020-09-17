@@ -50,27 +50,27 @@
     right:20px;
 }
 
-#gamer #choiceGamer, #computer #choiceComputer {
+#gamer #gamer-choice, #computer #computer-choice {
     list-style: none;
     text-align: center;
     margin: 30px 0 0;
     padding: 0px;
 }
-#gamer #choiceGamer li, #computer #choiceComputer li {
+#gamer #gamer-choice li, #computer #computer-choice li {
     display: inline;
     padding: 0 15px;
 }
 
-#gamer #choiceGamer a, #computer #choiceComputer a {
+#gamer #gamer-choice a, #computer #computer-choice a {
     opacity: .1;
 }
 
-#gamer #choiceGamer a:hover,
-#gamer #choiceGamer a.selected, #computer #choiceComputer a.selected {
+#gamer #gamer-choice a:hover,
+#gamer #gamer-choice a.selected, #computer #computer-choice a.selected {
     opacity: .9;
 }
 
-#gamer #choiceGamer img, #computer #choiceComputer img {
+#gamer #gamer-choice img, #computer #computer-choice img {
     max-width:20%;
 }
 
