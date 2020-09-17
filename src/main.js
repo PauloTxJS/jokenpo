@@ -88,7 +88,7 @@ function toPlay(choice) {
 
     let r = result(choiceGamer, choiceComputer);
     if (r === 0) {
-        msn(`Empate`);
+        msn(`It was a tie`);
     } else if (r === 1) {
         msn(`${name} WIN!`);
         pointsG++;
